@@ -1,0 +1,12 @@
+# Environments & Dependencies
+venv/
+.env
+__pycache__/
+*.py[cod]
+
+# Local Client Data & Logs (Critical Security Gates)
+data/
+logs/
+
+# Downloaded Receipts / PDFs
+*.pdf
