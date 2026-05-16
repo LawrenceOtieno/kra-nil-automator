@@ -9,4 +9,4 @@ data/
 logs/
 
 # Downloaded Receipts / PDFs
-*.pdf
+*.pdf.vscode/
