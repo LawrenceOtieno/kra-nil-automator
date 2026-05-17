@@ -1,0 +1,56 @@
+{
+   "appDesc": {
+      "message": "Surfuj po internecie bezpiecznie i prywatnie z rozszerzeniem na Chrome."
+   },
+   "appDescEdge": {
+      "message": "Przeglądaj sieć swobodnie, bezpiecznie i prywatnie, korzystając z rozszerzenia dla przeglądarki Microsoft Edge."
+   },
+   "appDescFirefox": {
+      "message": "Przeglądaj sieć swobodnie, bezpiecznie i prywatnie, korzystając z rozszerzenia dla przeglądarki Firefox."
+   },
+   "appName": {
+      "message": "Rozszerzenie Surfshark VPN"
+   },
+   "appNameEdge": {
+      "message": "Surfshark VPN"
+   },
+   "autofill": {
+      "message": "Automatycznie uzupełnij Alt ID na tej stronie"
+   },
+   "bypass": {
+      "message": "Lista Bypass (ND)"
+   },
+   "bypassAddDomain": {
+      "message": "Dodaj do listy Bypass i załaduj ponownie"
+   },
+   "bypassAddDomainPlaceholder": {
+      "message": "Dodaj $domain$ do listy Bypass i załaduj ponownie",
+      "placeholders": {
+         "domain": {
+            "content": "$1",
+            "example": "example.com"
+         }
+      }
+   },
+   "bypassRemoveDomain": {
+      "message": "Usuń z listy Bypass i załaduj ponownie"
+   },
+   "bypassRemoveDomainPlaceholder": {
+      "message": "Usuń $domain$ z listy Bypass i załaduj ponownie",
+      "placeholders": {
+         "domain": {
+            "content": "$1",
+            "example": "example.com"
+         }
+      }
+   },
+   "connected": {
+      "message": "Rozszerzenie Surfshark VPN. Podłączono do"
+   },
+   "disconnected": {
+      "message": "Rozszerzenie Surfshark VPN. Nie podłączono"
+   },
+   "reportAutofillIssue": {
+      "message": "Zgłoś problem z autouzupełnianiem"
+   }
+}

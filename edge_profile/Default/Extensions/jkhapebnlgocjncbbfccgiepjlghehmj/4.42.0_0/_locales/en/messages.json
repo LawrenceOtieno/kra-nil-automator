@@ -1,0 +1,56 @@
+{
+   "appDesc": {
+      "message": "Browse the web freely with secure, private internet access using the Chrome browser extension."
+   },
+   "appDescEdge": {
+      "message": "Browse the web freely with secure, private internet access for the Microsoft Edge browser extension."
+   },
+   "appDescFirefox": {
+      "message": "Browse the web freely with secure, private internet access for the Firefox browser extension."
+   },
+   "appName": {
+      "message": "Surfshark VPN Extension"
+   },
+   "appNameEdge": {
+      "message": "Surfshark VPN"
+   },
+   "autofill": {
+      "message": "Autofill Alt ID on this page"
+   },
+   "bypass": {
+      "message": "Bypass list (N/A)"
+   },
+   "bypassAddDomain": {
+      "message": "Add to Bypass list & reload"
+   },
+   "bypassAddDomainPlaceholder": {
+      "message": "Add $domain$ to Bypass list & reload",
+      "placeholders": {
+         "domain": {
+            "content": "$1",
+            "example": "example.com"
+         }
+      }
+   },
+   "bypassRemoveDomain": {
+      "message": "Remove from Bypass list & reload"
+   },
+   "bypassRemoveDomainPlaceholder": {
+      "message": "Remove $domain$ from Bypass list & reload",
+      "placeholders": {
+         "domain": {
+            "content": "$1",
+            "example": "example.com"
+         }
+      }
+   },
+   "connected": {
+      "message": "Surfshark VPN Extension. Connected to"
+   },
+   "disconnected": {
+      "message": "Surfshark VPN Extension. Not connected"
+   },
+   "reportAutofillIssue": {
+      "message": "Report Autofill issue"
+   }
+}

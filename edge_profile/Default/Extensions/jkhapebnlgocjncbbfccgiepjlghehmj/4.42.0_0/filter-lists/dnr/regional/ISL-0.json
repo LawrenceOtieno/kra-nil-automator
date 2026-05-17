@@ -1,0 +1,125 @@
+[
+    {
+        "id": 21,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "requestDomains": [
+                "app.pulsmedia.is",
+                "static.airserve.net"
+            ]
+        },
+        "priority": 1
+    },
+    {
+        "id": 7,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": ".is/ads/",
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 1
+    },
+    {
+        "id": 8,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": ".is/augl/",
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 1
+    },
+    {
+        "id": 9,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": ".is/*/augl/",
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 1
+    },
+    {
+        "id": 12,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||fotbolti.net/banners/",
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 1
+    },
+    {
+        "id": 13,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||vf.is/files/",
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 1
+    },
+    {
+        "id": 14,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||austurfrett.is/images/banners/",
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 1
+    },
+    {
+        "id": 15,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||hopkaup.is/banner/",
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 1
+    },
+    {
+        "id": 16,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||bmwkraftur.is/img/benni-Toyo_bordi2-500x60.gif",
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 1
+    },
+    {
+        "id": 17,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||bilasolur.is/banners/",
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 1
+    },
+    {
+        "id": 18,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||fotbolti.net/themes/2013/images/vef_bg.png",
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 1
+    }
+]

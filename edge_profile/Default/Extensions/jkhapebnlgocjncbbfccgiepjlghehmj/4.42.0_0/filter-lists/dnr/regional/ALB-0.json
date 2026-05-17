@@ -1,0 +1,428 @@
+[
+    {
+        "id": 429,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "requestDomains": [
+                "bisko.gjirafa.net",
+                "bisko.gjirafa.tech",
+                "gjc.gjirafa.com"
+            ]
+        },
+        "priority": 1
+    },
+    {
+        "id": 16,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||gjc.gjirafa.com^",
+            "domainType": "thirdParty",
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 2
+    },
+    {
+        "id": 33,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||kohajone.com/wp-content/uploads/2018/04/facile.png",
+            "resourceTypes": [
+                "image"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 101
+    },
+    {
+        "id": 34,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||kohajone.com/wp-content/uploads/2018/10/psikologu-1.jpeg",
+            "resourceTypes": [
+                "image"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 101
+    },
+    {
+        "id": 35,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||kohajone.com/wp-content/uploads/2018/12/300x25012345.gif",
+            "resourceTypes": [
+                "image"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 101
+    },
+    {
+        "id": 36,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "html",
+            "initiatorDomains": [
+                "kohajone.com"
+            ],
+            "resourceTypes": [
+                "sub_frame"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 301
+    },
+    {
+        "id": 45,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||living.al/images3/2018/banners/raiffeisen-2018-12-06.gif",
+            "resourceTypes": [
+                "image"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 101
+    },
+    {
+        "id": 57,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||gazetatema.net/wp-content/uploads/2018/12/web-banner.jpg",
+            "resourceTypes": [
+                "image"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 101
+    },
+    {
+        "id": 84,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||dritare.net/wp-content/uploads/2018/12/drittare.net_.jpeg",
+            "resourceTypes": [
+                "image"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 101
+    },
+    {
+        "id": 204,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||topmedia.al/wp-content/uploads/2018/03/ads-in-front.gif",
+            "resourceTypes": [
+                "image"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 101
+    },
+    {
+        "id": 237,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||gazetacelesi.al/img/Domus_administrator_380x309px.gif",
+            "resourceTypes": [
+                "image"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 101
+    },
+    {
+        "id": 281,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "html",
+            "initiatorDomains": [
+                "vizionplus.tv"
+            ],
+            "resourceTypes": [
+                "sub_frame"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 301
+    },
+    {
+        "id": 414,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||360grade.al/wp-content/themes/360grade/images/*.gif",
+            "resourceTypes": [
+                "image"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 101
+    },
+    {
+        "id": 415,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||360grade.al/wp-content/themes/360grade/images/*.jpg^",
+            "resourceTypes": [
+                "image"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 101
+    },
+    {
+        "id": 416,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||classlifestyle.com/rek/megabanner.php^",
+            "resourceTypes": [
+                "sub_frame"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 101
+    },
+    {
+        "id": 417,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||classlifestyle.com/rek/reklama-poshte-dok.php^",
+            "resourceTypes": [
+                "sub_frame"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 101
+    },
+    {
+        "id": 418,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||kosovarja-ks.com/wp-content/uploads/*.gif^",
+            "resourceTypes": [
+                "image"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 101
+    },
+    {
+        "id": 419,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||noa.al/b^",
+            "resourceTypes": [
+                "image"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 101
+    },
+    {
+        "id": 422,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||joq.al//banners^",
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 1
+    },
+    {
+        "id": 427,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||gameselect.net/*.php",
+            "initiatorDomains": [
+                "albvid.com"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 201
+    },
+    {
+        "id": 428,
+        "action": {
+            "type": "allow"
+        },
+        "condition": {
+            "urlFilter": "||videotekaime.net/uni/popunder.js|",
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 100001
+    },
+    {
+        "id": 431,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||teksteshqip.com/imgz/ads/336.gif",
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 1
+    },
+    {
+        "id": 432,
+        "action": {
+            "type": "allow"
+        },
+        "condition": {
+            "urlFilter": "||videotekaime.com/uni/popunder.js",
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 100001
+    },
+    {
+        "id": 450,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||youtube.com/embed/*?*&origin=*.filma24.*&widgetid",
+            "initiatorDomains": [
+                "filma24.*"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 201
+    },
+    {
+        "id": 451,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||static.boostcdn.net/js/*",
+            "initiatorDomains": [
+                "www.filma24.*"
+            ],
+            "resourceTypes": [
+                "script"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 301
+    },
+    {
+        "id": 452,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||youtube.com/s/player/*",
+            "initiatorDomains": [
+                "filma24.*"
+            ],
+            "resourceTypes": [
+                "script"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 301
+    },
+    {
+        "id": 485,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||img.bulevardionline.com//2020/07/blue_background_color-scaled.jpg",
+            "resourceTypes": [
+                "image"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 101
+    },
+    {
+        "id": 489,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||img.bulevardionline.com//2020/02/albcanon.gif",
+            "resourceTypes": [
+                "image"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 101
+    },
+    {
+        "id": 527,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||acp.al/images/banners/Selmani-desktop-new-banner-v4-02-2021-2.jpg",
+            "resourceTypes": [
+                "image"
+            ],
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 101
+    },
+    {
+        "id": 552,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||gjstatic.blob.core.windows.net/fix/bisko.js",
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 1
+    },
+    {
+        "id": 555,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||https://bisko.gjirafa.net/web/gjirafatest-sdk.js",
+            "isUrlFilterCaseSensitive": false
+        },
+        "priority": 1
+    }
+]

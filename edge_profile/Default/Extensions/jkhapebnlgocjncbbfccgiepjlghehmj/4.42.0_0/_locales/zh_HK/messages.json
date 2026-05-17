@@ -1,0 +1,56 @@
+{
+    "appName": {
+        "message": "Surfshark VPN 擴展程式"
+    },
+    "appNameEdge": {
+        "message": "Surfshark VPN"
+    },
+    "appDesc": {
+        "message": "透過 Chrome 瀏覽器擴充功能，享受安全、私密的網絡連線，自由瀏覽網頁。"
+    },
+    "appDescEdge": {
+        "message": "利用 Microsoft Edge 瀏覽器擴展程式的安全、私密互聯網存取功能來自由瀏覽網絡。"
+    },
+    "appDescFirefox": {
+        "message": "利用 Firefox 瀏覽器擴展程式的安全、私密互聯網存取功能來自由瀏覽網絡。"
+    },
+    "connected": {
+        "message": "Surfshark VPN 擴展程式。已連線。"
+    },
+    "disconnected": {
+        "message": "Surfshark VPN 擴展程式。未連線。"
+    },
+    "bypass": {
+        "message": "繞過清單（不適用）"
+    },
+    "bypassAddDomain": {
+        "message": "添加至繞過清單並重新加載"
+    },
+    "bypassRemoveDomain": {
+        "message": "移出繞過清單並重新加載"
+    },
+    "bypassAddDomainPlaceholder": {
+        "message": "將 $domain$ 添加至繞過清單並重新加載",
+        "placeholders": {
+            "domain": {
+                "content": "$1",
+                "example": "example.com"
+            }
+        }
+    },
+    "bypassRemoveDomainPlaceholder": {
+        "message": "將 $domain$ 移出繞過清單並重新加載",
+        "placeholders": {
+            "domain": {
+                "content": "$1",
+                "example": "example.com"
+            }
+        }
+    },
+    "autofill": {
+        "message": "在此頁自動填寫 Alt ID"
+    },
+    "reportAutofillIssue": {
+        "message": "報告 Autofill 問題"
+    }
+}

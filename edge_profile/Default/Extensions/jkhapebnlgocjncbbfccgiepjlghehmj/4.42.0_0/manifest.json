@@ -1,0 +1,227 @@
+{
+   "action": {
+      "default_icon": "icons/icon48.png",
+      "default_popup": "index.html",
+      "default_title": "__MSG_appName__"
+   },
+   "background": {
+      "service_worker": "background.bundle.js"
+   },
+   "content_scripts": [ {
+      "js": [ "cs-onboarding.bundle.js" ],
+      "matches": [ "https://surfshark.com/download/edge/onboarding*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "js": [ "cleanweb.bundle.js" ],
+      "match_about_blank": true,
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": false,
+      "css": [ "fonts.css" ],
+      "js": [ "autofill.bundle.js" ],
+      "match_about_blank": false,
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": false,
+      "js": [ "cs-isolated-world.bundle.js" ],
+      "match_about_blank": false,
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "cs-extension-login.bundle.js" ],
+      "matches": [ "https://my.surfshark.com/account/extension-login-cs*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "safe-search.bundle.js" ],
+      "matches": [ "https://google.com/search*", "https://*.google.com/search*", "https://google.ad/search*", "https://*.google.ad/search*", "https://google.ae/search*", "https://*.google.ae/search*", "https://google.com.af/search*", "https://*.google.com.af/search*", "https://google.com.ag/search*", "https://*.google.com.ag/search*", "https://google.al/search*", "https://*.google.al/search*", "https://google.am/search*", "https://*.google.am/search*", "https://google.co.ao/search*", "https://*.google.co.ao/search*", "https://google.com.ar/search*", "https://*.google.com.ar/search*", "https://google.as/search*", "https://*.google.as/search*", "https://google.at/search*", "https://*.google.at/search*", "https://google.com.au/search*", "https://*.google.com.au/search*", "https://google.az/search*", "https://*.google.az/search*", "https://google.ba/search*", "https://*.google.ba/search*", "https://google.com.bd/search*", "https://*.google.com.bd/search*", "https://google.be/search*", "https://*.google.be/search*", "https://google.bf/search*", "https://*.google.bf/search*", "https://google.bg/search*", "https://*.google.bg/search*", "https://google.com.bh/search*", "https://*.google.com.bh/search*", "https://google.bi/search*", "https://*.google.bi/search*", "https://google.bj/search*", "https://*.google.bj/search*", "https://google.com.bn/search*", "https://*.google.com.bn/search*", "https://google.com.bo/search*", "https://*.google.com.bo/search*", "https://google.com.br/search*", "https://*.google.com.br/search*", "https://google.bs/search*", "https://*.google.bs/search*", "https://google.bt/search*", "https://*.google.bt/search*", "https://google.co.bw/search*", "https://*.google.co.bw/search*", "https://google.by/search*", "https://*.google.by/search*", "https://google.com.bz/search*", "https://*.google.com.bz/search*", "https://google.ca/search*", "https://*.google.ca/search*", "https://google.cd/search*", "https://*.google.cd/search*", "https://google.cf/search*", "https://*.google.cf/search*", "https://google.cg/search*", "https://*.google.cg/search*", "https://google.ch/search*", "https://*.google.ch/search*", "https://google.ci/search*", "https://*.google.ci/search*", "https://google.co.ck/search*", "https://*.google.co.ck/search*", "https://google.cl/search*", "https://*.google.cl/search*", "https://google.cm/search*", "https://*.google.cm/search*", "https://google.cn/search*", "https://*.google.cn/search*", "https://google.com.co/search*", "https://*.google.com.co/search*", "https://google.co.cr/search*", "https://*.google.co.cr/search*", "https://google.com.cu/search*", "https://*.google.com.cu/search*", "https://google.cv/search*", "https://*.google.cv/search*", "https://google.com.cy/search*", "https://*.google.com.cy/search*", "https://google.cz/search*", "https://*.google.cz/search*", "https://google.de/search*", "https://*.google.de/search*", "https://google.dj/search*", "https://*.google.dj/search*", "https://google.dk/search*", "https://*.google.dk/search*", "https://google.dm/search*", "https://*.google.dm/search*", "https://google.com.do/search*", "https://*.google.com.do/search*", "https://google.dz/search*", "https://*.google.dz/search*", "https://google.com.ec/search*", "https://*.google.com.ec/search*", "https://google.ee/search*", "https://*.google.ee/search*", "https://google.com.eg/search*", "https://*.google.com.eg/search*", "https://google.es/search*", "https://*.google.es/search*", "https://google.com.et/search*", "https://*.google.com.et/search*", "https://google.fi/search*", "https://*.google.fi/search*", "https://google.com.fj/search*", "https://*.google.com.fj/search*", "https://google.fm/search*", "https://*.google.fm/search*", "https://google.fr/search*", "https://*.google.fr/search*", "https://google.ga/search*", "https://*.google.ga/search*", "https://google.ge/search*", "https://*.google.ge/search*", "https://google.gg/search*", "https://*.google.gg/search*", "https://google.com.gh/search*", "https://*.google.com.gh/search*", "https://google.com.gi/search*", "https://*.google.com.gi/search*", "https://google.gl/search*", "https://*.google.gl/search*", "https://google.gm/search*", "https://*.google.gm/search*", "https://google.gr/search*", "https://*.google.gr/search*", "https://google.com.gt/search*", "https://*.google.com.gt/search*", "https://google.gy/search*", "https://*.google.gy/search*", "https://google.com.hk/search*", "https://*.google.com.hk/search*", "https://google.hn/search*", "https://*.google.hn/search*", "https://google.hr/search*", "https://*.google.hr/search*", "https://google.ht/search*", "https://*.google.ht/search*", "https://google.hu/search*", "https://*.google.hu/search*", "https://google.co.id/search*", "https://*.google.co.id/search*", "https://google.ie/search*", "https://*.google.ie/search*", "https://google.co.il/search*", "https://*.google.co.il/search*", "https://google.im/search*", "https://*.google.im/search*", "https://google.co.in/search*", "https://*.google.co.in/search*", "https://google.iq/search*", "https://*.google.iq/search*", "https://google.is/search*", "https://*.google.is/search*", "https://google.it/search*", "https://*.google.it/search*", "https://google.je/search*", "https://*.google.je/search*", "https://google.com.jm/search*", "https://*.google.com.jm/search*", "https://google.jo/search*", "https://*.google.jo/search*", "https://google.co.jp/search*", "https://*.google.co.jp/search*", "https://google.co.ke/search*", "https://*.google.co.ke/search*", "https://google.com.kh/search*", "https://*.google.com.kh/search*", "https://google.ki/search*", "https://*.google.ki/search*", "https://google.kg/search*", "https://*.google.kg/search*", "https://google.co.kr/search*", "https://*.google.co.kr/search*", "https://google.com.kw/search*", "https://*.google.com.kw/search*", "https://google.kz/search*", "https://*.google.kz/search*", "https://google.la/search*", "https://*.google.la/search*", "https://google.com.lb/search*", "https://*.google.com.lb/search*", "https://google.li/search*", "https://*.google.li/search*", "https://google.lk/search*", "https://*.google.lk/search*", "https://google.co.ls/search*", "https://*.google.co.ls/search*", "https://google.lt/search*", "https://*.google.lt/search*", "https://google.lu/search*", "https://*.google.lu/search*", "https://google.lv/search*", "https://*.google.lv/search*", "https://google.com.ly/search*", "https://*.google.com.ly/search*", "https://google.co.ma/search*", "https://*.google.co.ma/search*", "https://google.md/search*", "https://*.google.md/search*", "https://google.me/search*", "https://*.google.me/search*", "https://google.mg/search*", "https://*.google.mg/search*", "https://google.mk/search*", "https://*.google.mk/search*", "https://google.ml/search*", "https://*.google.ml/search*", "https://google.com.mm/search*", "https://*.google.com.mm/search*", "https://google.mn/search*", "https://*.google.mn/search*", "https://google.com.mt/search*", "https://*.google.com.mt/search*", "https://google.mu/search*", "https://*.google.mu/search*", "https://google.mv/search*", "https://*.google.mv/search*", "https://google.mw/search*", "https://*.google.mw/search*", "https://google.com.mx/search*", "https://*.google.com.mx/search*", "https://google.com.my/search*", "https://*.google.com.my/search*", "https://google.co.mz/search*", "https://*.google.co.mz/search*", "https://google.com.na/search*", "https://*.google.com.na/search*", "https://google.com.ng/search*", "https://*.google.com.ng/search*", "https://google.com.ni/search*", "https://*.google.com.ni/search*", "https://google.ne/search*", "https://*.google.ne/search*", "https://google.nl/search*", "https://*.google.nl/search*", "https://google.no/search*", "https://*.google.no/search*", "https://google.com.np/search*", "https://*.google.com.np/search*", "https://google.nr/search*", "https://*.google.nr/search*", "https://google.nu/search*", "https://*.google.nu/search*", "https://google.co.nz/search*", "https://*.google.co.nz/search*", "https://google.com.om/search*", "https://*.google.com.om/search*", "https://google.com.pa/search*", "https://*.google.com.pa/search*", "https://google.com.pe/search*", "https://*.google.com.pe/search*", "https://google.com.pg/search*", "https://*.google.com.pg/search*", "https://google.com.ph/search*", "https://*.google.com.ph/search*", "https://google.com.pk/search*", "https://*.google.com.pk/search*", "https://google.pl/search*", "https://*.google.pl/search*", "https://google.pn/search*", "https://*.google.pn/search*", "https://google.com.pr/search*", "https://*.google.com.pr/search*", "https://google.ps/search*", "https://*.google.ps/search*", "https://google.pt/search*", "https://*.google.pt/search*", "https://google.com.py/search*", "https://*.google.com.py/search*", "https://google.com.qa/search*", "https://*.google.com.qa/search*", "https://google.ro/search*", "https://*.google.ro/search*", "https://google.ru/search*", "https://*.google.ru/search*", "https://google.rw/search*", "https://*.google.rw/search*", "https://google.com.sa/search*", "https://*.google.com.sa/search*", "https://google.com.sb/search*", "https://*.google.com.sb/search*", "https://google.sc/search*", "https://*.google.sc/search*", "https://google.se/search*", "https://*.google.se/search*", "https://google.com.sg/search*", "https://*.google.com.sg/search*", "https://google.sh/search*", "https://*.google.sh/search*", "https://google.si/search*", "https://*.google.si/search*", "https://google.sk/search*", "https://*.google.sk/search*", "https://google.com.sl/search*", "https://*.google.com.sl/search*", "https://google.sn/search*", "https://*.google.sn/search*", "https://google.so/search*", "https://*.google.so/search*", "https://google.sm/search*", "https://*.google.sm/search*", "https://google.sr/search*", "https://*.google.sr/search*", "https://google.st/search*", "https://*.google.st/search*", "https://google.com.sv/search*", "https://*.google.com.sv/search*", "https://google.td/search*", "https://*.google.td/search*", "https://google.tg/search*", "https://*.google.tg/search*", "https://google.co.th/search*", "https://*.google.co.th/search*", "https://google.com.tj/search*", "https://*.google.com.tj/search*", "https://google.tl/search*", "https://*.google.tl/search*", "https://google.tm/search*", "https://*.google.tm/search*", "https://google.tn/search*", "https://*.google.tn/search*", "https://google.to/search*", "https://*.google.to/search*", "https://google.com.tr/search*", "https://*.google.com.tr/search*", "https://google.tt/search*", "https://*.google.tt/search*", "https://google.com.tw/search*", "https://*.google.com.tw/search*", "https://google.co.tz/search*", "https://*.google.co.tz/search*", "https://google.com.ua/search*", "https://*.google.com.ua/search*", "https://google.co.ug/search*", "https://*.google.co.ug/search*", "https://google.co.uk/search*", "https://*.google.co.uk/search*", "https://google.com.uy/search*", "https://*.google.com.uy/search*", "https://google.co.uz/search*", "https://*.google.co.uz/search*", "https://google.com.vc/search*", "https://*.google.com.vc/search*", "https://google.co.ve/search*", "https://*.google.co.ve/search*", "https://google.co.vi/search*", "https://*.google.co.vi/search*", "https://google.com.vn/search*", "https://*.google.com.vn/search*", "https://google.vu/search*", "https://*.google.vu/search*", "https://google.ws/search*", "https://*.google.ws/search*", "https://google.rs/search*", "https://*.google.rs/search*", "https://google.co.za/search*", "https://*.google.co.za/search*", "https://google.co.zm/search*", "https://*.google.co.zm/search*", "https://google.co.zw/search*", "https://*.google.co.zw/search*", "https://google.cat/search*", "https://*.google.cat/search*" ]
+   }, {
+      "js": [ "cs-gmail-phishing-scanner.bundle.js" ],
+      "matches": [ "https://mail.google.com/mail/u/*" ]
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self'; img-src 'self' https://cdn.ss-cdn.com/ data:;; object-src 'none'"
+   },
+   "declarative_net_request": {
+      "rule_resources": [ {
+         "enabled": true,
+         "id": "adBlocker",
+         "path": "filter-lists/dnr/adBlocker.json"
+      }, {
+         "enabled": true,
+         "id": "cookieBlocker",
+         "path": "filter-lists/dnr/cookieBlocker.json"
+      }, {
+         "enabled": false,
+         "id": "ALB-0",
+         "path": "filter-lists/dnr/regional/ALB-0.json"
+      }, {
+         "enabled": false,
+         "id": "ARA-0",
+         "path": "filter-lists/dnr/regional/ARA-0.json"
+      }, {
+         "enabled": false,
+         "id": "BGR-0",
+         "path": "filter-lists/dnr/regional/BGR-0.json"
+      }, {
+         "enabled": false,
+         "id": "CHN-0",
+         "path": "filter-lists/dnr/regional/CHN-0.json"
+      }, {
+         "enabled": false,
+         "id": "CZE-0",
+         "path": "filter-lists/dnr/regional/CZE-0.json"
+      }, {
+         "enabled": false,
+         "id": "DEU-0",
+         "path": "filter-lists/dnr/regional/DEU-0.json"
+      }, {
+         "enabled": false,
+         "id": "EST-0",
+         "path": "filter-lists/dnr/regional/EST-0.json"
+      }, {
+         "enabled": false,
+         "id": "FIN-0",
+         "path": "filter-lists/dnr/regional/FIN-0.json"
+      }, {
+         "enabled": false,
+         "id": "FRA-0",
+         "path": "filter-lists/dnr/regional/FRA-0.json"
+      }, {
+         "enabled": false,
+         "id": "GRC-0",
+         "path": "filter-lists/dnr/regional/GRC-0.json"
+      }, {
+         "enabled": false,
+         "id": "HRV-0",
+         "path": "filter-lists/dnr/regional/HRV-0.json"
+      }, {
+         "enabled": false,
+         "id": "HUN-0",
+         "path": "filter-lists/dnr/regional/HUN-0.json"
+      }, {
+         "enabled": false,
+         "id": "IDN-0",
+         "path": "filter-lists/dnr/regional/IDN-0.json"
+      }, {
+         "enabled": false,
+         "id": "IND-0",
+         "path": "filter-lists/dnr/regional/IND-0.json"
+      }, {
+         "enabled": false,
+         "id": "IRN-0",
+         "path": "filter-lists/dnr/regional/IRN-0.json"
+      }, {
+         "enabled": false,
+         "id": "ISL-0",
+         "path": "filter-lists/dnr/regional/ISL-0.json"
+      }, {
+         "enabled": false,
+         "id": "ISR-0",
+         "path": "filter-lists/dnr/regional/ISR-0.json"
+      }, {
+         "enabled": false,
+         "id": "ITA-0",
+         "path": "filter-lists/dnr/regional/ITA-0.json"
+      }, {
+         "enabled": false,
+         "id": "JPN-1",
+         "path": "filter-lists/dnr/regional/JPN-1.json"
+      }, {
+         "enabled": false,
+         "id": "KOR-1",
+         "path": "filter-lists/dnr/regional/KOR-1.json"
+      }, {
+         "enabled": false,
+         "id": "LTU-0",
+         "path": "filter-lists/dnr/regional/LTU-0.json"
+      }, {
+         "enabled": false,
+         "id": "LVA-0",
+         "path": "filter-lists/dnr/regional/LVA-0.json"
+      }, {
+         "enabled": false,
+         "id": "MKD-0",
+         "path": "filter-lists/dnr/regional/MKD-0.json"
+      }, {
+         "enabled": false,
+         "id": "NLD-0",
+         "path": "filter-lists/dnr/regional/NLD-0.json"
+      }, {
+         "enabled": false,
+         "id": "NOR-0",
+         "path": "filter-lists/dnr/regional/NOR-0.json"
+      }, {
+         "enabled": false,
+         "id": "POL-0",
+         "path": "filter-lists/dnr/regional/POL-0.json"
+      }, {
+         "enabled": false,
+         "id": "POL-2",
+         "path": "filter-lists/dnr/regional/POL-2.json"
+      }, {
+         "enabled": false,
+         "id": "ROU-1",
+         "path": "filter-lists/dnr/regional/ROU-1.json"
+      }, {
+         "enabled": false,
+         "id": "RUS-0",
+         "path": "filter-lists/dnr/regional/RUS-0.json"
+      }, {
+         "enabled": false,
+         "id": "RUS-1",
+         "path": "filter-lists/dnr/regional/RUS-1.json"
+      }, {
+         "enabled": false,
+         "id": "SPA-0",
+         "path": "filter-lists/dnr/regional/SPA-0.json"
+      }, {
+         "enabled": false,
+         "id": "SPA-1",
+         "path": "filter-lists/dnr/regional/SPA-1.json"
+      }, {
+         "enabled": false,
+         "id": "SVN-0",
+         "path": "filter-lists/dnr/regional/SVN-0.json"
+      }, {
+         "enabled": false,
+         "id": "SWE-1",
+         "path": "filter-lists/dnr/regional/SWE-1.json"
+      }, {
+         "enabled": false,
+         "id": "THA-0",
+         "path": "filter-lists/dnr/regional/THA-0.json"
+      }, {
+         "enabled": false,
+         "id": "TUR-0",
+         "path": "filter-lists/dnr/regional/TUR-0.json"
+      }, {
+         "enabled": false,
+         "id": "VIE-1",
+         "path": "filter-lists/dnr/regional/VIE-1.json"
+      } ]
+   },
+   "default_locale": "en",
+   "description": "__MSG_appDescEdge__",
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "icons/icon128-active.png",
+      "16": "icons/icon16-active.png",
+      "32": "icons/icon32-active.png",
+      "48": "icons/icon48-active.png",
+      "64": "icons/icon64-active.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5Y0oypp7xTYwH7Cr4JbqBwNSkhmV4ep/VHDBivrJF9Q9948LL9PkYp4x+GXgjINfB8Ix2DBFbiDLm22AuWvfjJ2ihk/RUpw4d9/m19MyvcszTf5p/Gq4puQiZ/yVrcqK/fHau76OYxmwy2OI1D7SLBtDTg89TjD7okxHdJ6XFh5sZBxTxkQ0FiviZYufp7DNW8kcdqeZwNSSGaUbP48GxXRm+MYZVDx3fzIZ2WnvABBwx5LT8eWsgFfB+c05KxknHN2O7XPKckI7ZQ/NYHoubxbboq0ZzX6r8z4RafvOgwUbjtboDQozJwp80+xpt+vhUu18aZN7sXIZyPLpKqkITwIDAQAB",
+   "manifest_version": 3,
+   "minimum_chrome_version": "111.0",
+   "name": "__MSG_appNameEdge__",
+   "permissions": [ "proxy", "webRequest", "webNavigation", "privacy", "tabs", "contextMenus", "storage", "scripting", "webRequestAuthProvider", "declarativeNetRequest", "declarativeNetRequestFeedback", "browsingData" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "4.42.0",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "Roboto-*.woff", "Roboto-*.woff2", "autofill.css", "breach-alert.css", "cs-gmail-phishing-scanner.css", "safe-search.css", "fonts.css", "autofill-action-light.svg", "autofill-action-dark.svg", "/web_accessible_resources/*" ]
+   } ]
+}

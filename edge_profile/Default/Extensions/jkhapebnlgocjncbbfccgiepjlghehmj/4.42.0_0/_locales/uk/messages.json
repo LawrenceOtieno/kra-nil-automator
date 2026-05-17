@@ -1,0 +1,56 @@
+{
+   "appDesc": {
+      "message": "Переглядайте вебсторінки вільно, безпечно й конфіденційно за допомогою розширення браузера Chrome."
+   },
+   "appDescEdge": {
+      "message": "Переглядайте вебсторінки вільно, безпечно й конфіденційно з розширенням браузера Microsoft Edge."
+   },
+   "appDescFirefox": {
+      "message": "Переглядайте вебсторінки вільно, безпечно й конфіденційно з розширенням браузера Firefox."
+   },
+   "appName": {
+      "message": "Розширення Surfshark VPN"
+   },
+   "appNameEdge": {
+      "message": "Surfshark VPN"
+   },
+   "autofill": {
+      "message": "Автоматично заповнити даними Alt ID на цій сторінці"
+   },
+   "bypass": {
+      "message": "Список обходу (Н/Д)"
+   },
+   "bypassAddDomain": {
+      "message": "Додати до списку обходу й перезавантажити"
+   },
+   "bypassAddDomainPlaceholder": {
+      "message": "Додати $domain$ до списку обходу й перезавантажити",
+      "placeholders": {
+         "domain": {
+            "content": "$1",
+            "example": "example.com"
+         }
+      }
+   },
+   "bypassRemoveDomain": {
+      "message": "Видалити зі списку обходу й перезавантажити"
+   },
+   "bypassRemoveDomainPlaceholder": {
+      "message": "Вилучити $domain$ зі списку обходу й перезавантажити",
+      "placeholders": {
+         "domain": {
+            "content": "$1",
+            "example": "example.com"
+         }
+      }
+   },
+   "connected": {
+      "message": "Розширення Surfshark VPN. Підключено до"
+   },
+   "disconnected": {
+      "message": "Розширення Surfshark VPN. Не підключено"
+   },
+   "reportAutofillIssue": {
+      "message": "Повідомити про проблему з автозаповненням"
+   }
+}

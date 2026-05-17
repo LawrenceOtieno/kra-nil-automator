@@ -1,0 +1,56 @@
+{
+   "appDesc": {
+      "message": "Navegue online livremente com acesso seguro e privado à internet com a extensão para Chrome."
+   },
+   "appDescEdge": {
+      "message": "Navegue na internet livremente com o acesso seguro e privado da extensão de navegador do Microsoft Edge."
+   },
+   "appDescFirefox": {
+      "message": "Navegue na internet livremente com o acesso seguro e privado da extensão de navegador do Firefox."
+   },
+   "appName": {
+      "message": "Extensão para a VPN Surfshark"
+   },
+   "appNameEdge": {
+      "message": "Surfshark VPN"
+   },
+   "autofill": {
+      "message": "Preencher o Alt ID automaticamente nesta página"
+   },
+   "bypass": {
+      "message": "Lista de bypass (N/A)"
+   },
+   "bypassAddDomain": {
+      "message": "Adicionar à lista de bypass e recarregar"
+   },
+   "bypassAddDomainPlaceholder": {
+      "message": "Adicionar $domain$ à lista de bypass e recarregar",
+      "placeholders": {
+         "domain": {
+            "content": "$1",
+            "example": "example.com"
+         }
+      }
+   },
+   "bypassRemoveDomain": {
+      "message": "Remover da lista de bypass e recarregar"
+   },
+   "bypassRemoveDomainPlaceholder": {
+      "message": "Remover $domain$ da lista de bypass e recarregar",
+      "placeholders": {
+         "domain": {
+            "content": "$1",
+            "example": "example.com"
+         }
+      }
+   },
+   "connected": {
+      "message": "Extensão Surfshark VPN. Conectada"
+   },
+   "disconnected": {
+      "message": "Extensão Surfshark VPN. Não conectada"
+   },
+   "reportAutofillIssue": {
+      "message": "Relatar problema de preenchimento automático"
+   }
+}

@@ -1,0 +1,56 @@
+{
+   "appDesc": {
+      "message": "Chrome 브라우저 전용 확장 프로그램을 사용해 보안과 개인정보 보호를 강화하고, 자유로운 인터넷 접속을 경험해 보세요."
+   },
+   "appDescEdge": {
+      "message": "Microsoft Edge 브라우저에 확장 프로그램을 통해 안전한 프라이빗 인터넷 액세스로 자유롭게 웹을 탐색하세요."
+   },
+   "appDescFirefox": {
+      "message": "Firefox 브라우저에 확장 프로그램을 통해 안전한 프라이빗 인터넷 액세스로 자유롭게 웹을 탐색하세요."
+   },
+   "appName": {
+      "message": "Surfshark VPN 확장 프로그램"
+   },
+   "appNameEdge": {
+      "message": "Surfshark VPN"
+   },
+   "autofill": {
+      "message": "이 페이지에서 Alt ID 자동 채우기"
+   },
+   "bypass": {
+      "message": "우회 목록(N/A)"
+   },
+   "bypassAddDomain": {
+      "message": "우회 목록에 추가 후 다시 로드"
+   },
+   "bypassAddDomainPlaceholder": {
+      "message": "우회 목록에 $domain$ 추가 후 다시 로드",
+      "placeholders": {
+         "domain": {
+            "content": "$1",
+            "example": "example.com"
+         }
+      }
+   },
+   "bypassRemoveDomain": {
+      "message": "우회 목록에서 제거 후 다시 로드"
+   },
+   "bypassRemoveDomainPlaceholder": {
+      "message": "우회 목록에서 $domain$ 제거 후 다시 로드",
+      "placeholders": {
+         "domain": {
+            "content": "$1",
+            "example": "example.com"
+         }
+      }
+   },
+   "connected": {
+      "message": "Surfshark VPN Extension. 연결"
+   },
+   "disconnected": {
+      "message": "Surfshark VPN Extension. 연결되지 않음"
+   },
+   "reportAutofillIssue": {
+      "message": "자동 완성 문제 보고"
+   }
+}
