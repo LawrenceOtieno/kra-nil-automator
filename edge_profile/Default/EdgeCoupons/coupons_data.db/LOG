@@ -1,6 +1,0 @@
-2026/05/17-17:42:08.156 b10 Reusing MANIFEST D:\Projects\kra-nil-automator\edge_profile\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
-2026/05/17-17:42:08.159 b10 Recovering log #23
-2026/05/17-17:42:08.162 b10 Reusing old log D:\Projects\kra-nil-automator\edge_profile\Default\EdgeCoupons/coupons_data.db/000023.log 
-2026/05/17-17:42:08.409 4a58 Level-0 table #27: started
-2026/05/17-17:42:08.414 4a58 Level-0 table #27: 682560 bytes OK
-2026/05/17-17:42:08.424 4a58 Delete type=0 #23
