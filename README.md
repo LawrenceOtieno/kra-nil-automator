@@ -1,14 +1,16 @@
-```text
 # ⚡ KRA Nil Automator Pro
 
-[![Python Version](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/)
-[![Framework](https://img.shields.io/badge/framework-Flask-emerald.svg)](https://flask.palletsprojects.com/)
-[![Automation Engine](https://img.shields.io/badge/engine-Playwright-red.svg)](https://playwright.dev/python/)
-[![Deployment Status](https://img.shields.io/badge/deployment-Industrial--WSGI-orange.svg)]()
+<p align="center">
+  <img src="[https://img.shields.io/badge/python-3.12+-blue.svg?style=for-the-badge](https://img.shields.io/badge/python-3.12+-blue.svg?style=for-the-badge)" alt="Python Version">
+  <img src="[https://img.shields.io/badge/framework-Flask-emerald.svg?style=for-the-badge](https://img.shields.io/badge/framework-Flask-emerald.svg?style=for-the-badge)" alt="Framework">
+  <img src="[https://img.shields.io/badge/engine-Playwright-red.svg?style=for-the-badge](https://img.shields.io/badge/engine-Playwright-red.svg?style=for-the-badge)" alt="Automation Engine">
+  <img src="[https://img.shields.io/badge/deployment-Industrial--WSGI-orange.svg?style=for-the-badge](https://img.shields.io/badge/deployment-Industrial--WSGI-orange.svg?style=for-the-badge)" alt="Deployment Status">
+</p>
 
 An industrial-grade, multi-user automation engine designed to orchestrate ephemeral browser sessions for filing continuous Nil tax returns. Built with a sleek Tailwind CSS web interface and backed by a robust production WSGI server, this platform operates with **zero credential storage**—ensuring absolute privacy and data sovereignty.
 
 ---
+
 ## 📸 System Interface Overview
 
 ### 🖥️ The Multi-User Control Center
@@ -26,6 +28,7 @@ An industrial-grade, multi-user automation engine designed to orchestrate epheme
 </p>
 
 ---
+
 ## 🚀 Key Architectural Features
 
 * **👥 Multi-User Ephemeral Architecture:** Credentials exist purely within volatile runtime memory pools during the active execution thread. No database pipelines, no local `.env` writing, and absolute security isolation.
@@ -37,21 +40,17 @@ An industrial-grade, multi-user automation engine designed to orchestrate epheme
 
 ## 🛠️ System Architecture Flow
 
-```text
-+-----------------------+      Form Submission      +------------------------+
-|   Tailwind CSS UI     | ------------------------> | Waitress WSGI Engine   |
-| (Dynamic PIN/Password)|                           |  (Multi-Threaded Pool) |
-+-----------------------+                           +------------------------+
-                                                                |
-                                                                | Popen Subprocess
-                                                                v
-+-----------------------+      CDP Port Hook        +------------------------+
-|  Official iTax Portal | <------------------------ | Playwright Automation  |
-|  (Returns Registered) |                           |   (src/engine/login)   |
-+-----------------------+                           +------------------------+
-```
+```mermaid
+graph LR
+    A[Tailwind CSS UI<br>Dynamic PIN/Password] -->|Form Submission| B(Waitress WSGI Engine<br>Multi-Threaded Pool)
+    B -->|Popen Subprocess| C(Playwright Automation<br>src/engine/login)
+    C -->|CDP Port Hook| D[Official iTax Portal<br>Returns Registered]
 
----
+    style A fill:#1e1e2e,stroke:#313244,stroke-width:2px,color:#cdd6f4
+    style B fill:#11111b,stroke:#a6e3a1,stroke-width:2px,color:#a6e3a1
+    style C fill:#11111b,stroke:#f38ba8,stroke-width:2px,color:#f38ba8
+    style D fill:#1e1e2e,stroke:#f9e2af,stroke-width:2px,color:#f9e2af
+
 
 ## 💻 Local Workspace Installation
 
