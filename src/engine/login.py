@@ -1,110 +1,109 @@
-import logging
-import sys
 import os
+import sys
+import logging
 from playwright.sync_api import sync_playwright
-from dotenv import load_dotenv
 
-# Initialize local environment secrets
-load_dotenv()
+# --- SYSTEMIC LOGGER CONFIGURATION ---
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+    handlers=[logging.StreamHandler(sys.stdout)]
+)
+logger = logging.getLogger("AutomationEngine")
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+# --- CREDENTIAL RESOLUTION HANDLER ---
+user_pin = ""
+user_password = ""
 
-logger = logging.getLogger(__name__)
+# If args are passed from our dynamic Flask interface web submission
+if "--pin" in sys.argv and "--password" in sys.argv:
+    try:
+        pin_idx = sys.argv.index("--pin") + 1
+        pass_idx = sys.argv.index("--password") + 1
+        user_pin = sys.argv[pin_idx].strip().upper()
+        user_password = sys.argv[pass_idx].strip()
+        logger.info("Dynamic runtime session credentials loaded via application CLI parameters pool.")
+    except Exception as arg_err:
+        logger.error(f"Failed parsing systemic command-line flags: {arg_err}")
 
-def login_to_itax():
-    """
-    Navigates and populates credentials using explicit field activation events,
-    then pauses for manual security stamp entry before executing the login pipeline.
-    """
-    pin = os.getenv("KRA_PIN")
-    password = os.getenv("KRA_PASSWORD")
+# Fallback block: If no command args exist, look inside local .env configurations (for backward compatibility)
+if not user_pin or not user_password:
+    from dotenv import load_dotenv
+    load_dotenv()
+    user_pin = os.getenv("KRA_PIN", "").strip().upper()
+    user_password = os.getenv("KRA_PASSWORD", "").strip()
+    logger.info("Fallback activated: Credentials resolved out of local workspace environment pools.")
+
+# Validation Gateway
+if not user_pin or not user_password:
+    logger.critical("Engine Initialization Failure: No identity attributes provided for this processing thread.")
+    sys.exit(1)
+
+def run_login_pipeline():
+    logger.info("Initializing Playwright sync attachment thread...")
     
-    if not pin or not password:
-        logger.error("Missing credentials! Check your local .env file.")
-        return
-
     with sync_playwright() as p:
         try:
-            logger.info("Connecting to live desktop Microsoft Edge instance via port 9222...")
+            # Connect directly to our pre-warmed background browser port instance
+            logger.info("Hooking running Edge instance over CDP channel on port 9222...")
             browser = p.chromium.connect_over_cdp("http://127.0.0.1:9222")
             
+            # Access the default context or active tabs
             context = browser.contexts[0]
             page = context.pages[0] if context.pages else context.new_page()
             
-            logger.info("Navigating to KRA iTax Portal...")
-            page.goto("https://itax.kra.go.ke/KRA-Portal/", wait_until="load")
-            page.wait_for_timeout(2000)
+            # 1. Target Portal Navigation
+            logger.info("Directing browser focus to target portal domain...")
+            page.goto("https://itax.kra.go.ke/KRA-Portal/", timeout=45000)
+            page.wait_for_load_state("networkidle")
             
-            # 1. Type PIN with explicit element activation
-            logger.info("Typing secure environment PIN payload...")
-            pin_field = page.locator("#logid")
-            pin_field.click()
-            pin_field.fill("")  # Clears field and updates structural DOM state
-            pin_field.type(pin, delay=100)
-            page.wait_for_timeout(500)
+            # 2. Inject Dynamic User PIN
+            logger.info(f"Injecting User Identifier Target State: {user_pin}")
+            page.locator("#logInAs").wait_for(state="visible", timeout=10000)
+            page.fill("#logInAs", user_pin)
             
-            # 2. Trigger validation loops
-            logger.info("Simulating field exit via 'Tab'...")
+            # 3. Simulate Gateway Intermediary Action to trigger validation rules
             page.keyboard.press("Tab")
-            page.wait_for_timeout(2500)
-            
-            # 3. Click Continue
-            logger.info("Clicking the validation 'Continue' button...")
-            page.locator("a:has-text('Continue')").first.click()
-            
-            # 4. Wait for form transition fields
-            logger.info("Waiting for password input field to render...")
-            page.wait_for_selector("input[type='password']", timeout=15000)
-            
-            # 5. Type Password with explicit element activation
-            logger.info("Injecting secure password...")
-            password_field = page.locator("input[type='password']").first
-            password_field.click()
-            password_field.fill("")  # Clears any virtual keyboard cache hooks
-            password_field.type(password, delay=100)
             page.wait_for_timeout(500)
             
-            # Focus on security stamp answer box
-            captcha_field = page.locator("#captcahText, input[name='captchaText']").first
-            captcha_field.click()
-            captcha_field.fill("")
+            # 4. Inject Password Parameter Asset
+            logger.info("Injecting protected account access token vector...")
+            page.locator("#txtPrisPswd").wait_for(state="visible", timeout=10000)
+            page.fill("#txtPrisPswd", user_password)
             
-            # 6. High-Timeout Dynamic Wait Loop
-            logger.info("=== MANUAL STAMP ACTION TIMELOCK ACTIVE ===")
-            logger.info("Take your time! Look at Edge, calculate the math problem, and type it in.")
+            # 5. Hand off execution thread to operator for Security Math Challenge
+            logger.info("!!! MANUAL INTERVENTION REQUIRED !!!")
+            logger.info("Please calculate the math captcha on the screen and type it directly into the browser window.")
             
-            # 5-minute patient waiting window
-            for _ in range(600):  
-                current_value = captcha_field.input_value()
-                if len(current_value.strip()) > 0:
-                    logger.info(f"Detected manual input: '{current_value}'. Processing submission sequence...")
-                    page.wait_for_timeout(800)  # Breath window to guarantee final character registration
-                    break
-                page.wait_for_timeout(500)
-            else:
-                logger.warning("Timed out waiting for manual security stamp entry after 5 minutes.")
-                return
-            
+            # 6. Safety countdown tracking window to allow operator calculation entry
+            countdown = 12
+            for i in range(countdown, 0, -1):
+                logger.info(f"Awaiting user arithmetic inputs... {i}s remaining")
+                page.wait_for_timeout(1000)
+                
             # 7. Force Submission Paths
             logger.info("Invoking page submission pipelines...")
             
-            # Path A: Trigger page form execution script directly
-            page.evaluate("try { loginSubmit(); } catch(e) {}")
+            # Step A: Type a final tab out of the captcha field to ensure state registry
+            page.keyboard.press("Tab")
+            page.wait_for_timeout(300)
             
-            # Path B: Backup click ignoring typical structural wait-checks
+            # Step B: Direct, unmitigated hardware click simulation on the official Login button
             try:
-                page.locator("#Image4, img[src*='login']").first.click(timeout=1000, force=True)
-            except:
-                pass
+                logger.info("Simulating physical hardware pointer strike on Login button...")
+                # Targets the red login button asset directly and forces the action overriding hidden layout overlays
+                page.locator("#Image4, img[src*='login'], input[type='image']").first.click(force=True, timeout=3000)
+            except Exception as click_err:
+                logger.warning(f"Selector click stalled ({click_err}), resorting to context evaluation script injection fallback...")
+                # Ultimate fallback script path execution
+                page.evaluate("try { loginSubmit(); } catch(e) {}")
             
             # Keep browser alive briefly to witness the dashboard load fully
             page.wait_for_timeout(6000)
             logger.info("Login wrapper script operation complete.")
-                
-        except Exception as e:
-            logger.error(f"Execution failed: {e}")
+            
+        except Exception as runtime_err:
+            logger.error(f"Execution thread crash event intercepted: {runtime_err}")
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
-    print("--- Running Smart-Wait Edge Login Engine ---")
-    login_to_itax()
+    run_login_pipeline()
