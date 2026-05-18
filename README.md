@@ -51,7 +51,7 @@ graph LR
     style C fill:#11111b,stroke:#f38ba8,stroke-width:2px,color:#f38ba8
     style D fill:#1e1e2e,stroke:#f9e2af,stroke-width:2px,color:#f9e2af
 
-
+---
 ## 💻 Local Workspace Installation
 
 ### 1. Clone & Initialize Environment
