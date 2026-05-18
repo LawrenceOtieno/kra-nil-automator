@@ -1,4 +1,4 @@
-#  KRA Nil Automator Pro
+﻿#  KRA Nil Automator Pro
 
 <p align="center">
   <img src="https://img.shields.io/badge/python-3.12+-blue.svgstyle=for-the-badge" alt="Python Version">
@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/deployment-Industrial--WSGI-orange.svgstyle=for-the-badge" alt="Deployment Status">
 </p>
 
-An industrial-grade, multi-user automation engine designed to orchestrate ephemeral browser sessions for filing continuous Nil tax returns. Built with a sleek Tailwind CSS web interface and backed by a robust production WSGI server, this platform operates with **zero credential storage**�ensuring absolute privacy and data sovereignty.
+An industrial-grade, multi-user automation engine designed to orchestrate ephemeral browser sessions for filing continuous Nil tax returns. Built with a sleek Tailwind CSS web interface and backed by a robust production WSGI server, this platform operates with **zero credential storage**—ensuring absolute privacy and data sovereignty.
 
 ---
 
@@ -93,3 +93,4 @@ python app.py
 
 ##  Security Statement
 This application is strictly **ephemeral**. It does not possess a persistent database component, state registry machine, or remote tracker analytics. When a user executes the engine, their credentials are transferred securely via local HTTP POST methods directly to the operating system's command execution flags, passing instantly to the browser session and evaporating entirely upon task completion.
+
