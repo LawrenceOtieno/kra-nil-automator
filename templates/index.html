@@ -25,78 +25,63 @@
             ⚡ KRA Nil Automator Pro
         </h1>
         <p class="text-slate-400 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
-            A refined, distraction-free web gateway built to orchestrate local browser interactions with flawless precision.
+            Universal execution engine. Enter your target session profiles to trigger isolated desktop filing sequences on demand.
         </p>
         <div class="flex flex-wrap justify-center gap-3 mt-6">
-            <span class="px-3 py-1 text-xs font-medium bg-slate-800/60 text-slate-300 border border-slate-700/50 rounded-full shadow-sm">🔒 Isolated Local Run</span>
-            <span class="px-3 py-1 text-xs font-medium bg-slate-800/60 text-slate-300 border border-slate-700/50 rounded-full shadow-sm">🌐 Edge CDP Hub</span>
-            <span class="px-3 py-1 text-xs font-medium bg-slate-800/60 text-slate-300 border border-slate-700/50 rounded-full shadow-sm">💻 Terminal Synced</span>
+            <span class="px-3 py-1 text-xs font-medium bg-slate-800/60 text-slate-300 border border-slate-700/50 rounded-full shadow-sm">🔒 Ephemeral Run (No Storage)</span>
+            <span class="px-3 py-1 text-xs font-medium bg-slate-800/60 text-slate-300 border border-slate-700/50 rounded-full shadow-sm">👥 Multi-User Ready</span>
         </div>
     </header>
 
-    <main class="container mx-auto px-6 py-12 max-w-5xl flex-grow">
+    <main class="container mx-auto px-6 py-12 max-w-2xl flex-grow">
+        
         {% if message %}
         <div class="mb-8 p-4 rounded-xl {% if 'success' in status %}bg-emerald-950/40 border border-emerald-500/30 text-emerald-300{% else %}bg-amber-950/40 border border-amber-500/30 text-amber-300{% endif %} flex items-center gap-3">
             <span>ℹ️</span> <p class="text-sm font-medium">{{ message }}</p>
         </div>
         {% endif %}
 
-        <div class="grid md:grid-cols-2 gap-8 items-start">
-            <section class="glass-panel p-8 rounded-2xl shadow-xl space-y-6">
-                <div>
-                    <h2 class="text-xl font-bold text-slate-100 flex items-center gap-2">🔑 Identity Credentials</h2>
-                    <p class="text-xs text-slate-400 mt-1">Stored securely inside your local execution environment variables loop.</p>
+        <div class="glass-panel p-8 rounded-2xl shadow-xl space-y-8">
+            
+            <div class="pb-6 border-b border-slate-800/60 flex items-center justify-between gap-4">
+                <div class="flex-grow">
+                    <h2 class="text-base font-bold text-slate-200">Step 1: Initialize Dedicated Debug Window</h2>
+                    <p class="text-xs text-slate-400 mt-0.5">Spins up an isolated local port instance to intercept Playwright hooks safely.</p>
                 </div>
-                <form action="/save" method="POST" class="space-y-4">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">KRA PIN Identifier</label>
-                        <input type="text" name="pin" value="{{ pin }}" placeholder="A00XXXXXXXX" 
-                               class="w-full bg-slate-950/60 border border-slate-800 focus:border-red-500/50 focus:ring-2 focus:ring-red-500/20 text-slate-100 placeholder-slate-600 rounded-xl px-4 py-3 text-sm font-medium tracking-wide outline-none transition-all duration-200">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Gateway Account Password</label>
-                        <input type="password" name="password" value="{{ password }}" placeholder="••••••••" 
-                               class="w-full bg-slate-950/60 border border-slate-800 focus:border-red-500/50 focus:ring-2 focus:ring-red-500/20 text-slate-100 placeholder-slate-600 rounded-xl px-4 py-3 text-sm outline-none transition-all duration-200">
-                    </div>
-                    <button type="submit" class="w-full bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold text-sm py-3 px-4 rounded-xl shadow-md transition-all duration-150 transform active:scale-[0.99] mt-2">
-                        💾 Save Engine Profiles
+                <form action="/launch-browser" method="POST" class="shrink-0">
+                    <button type="submit" class="bg-slate-800 hover:bg-slate-700 active:bg-slate-800 border border-slate-700 text-slate-200 text-xs font-bold px-5 py-3 rounded-xl transition-all shadow-md">
+                        🌐 Launch Browser
                     </button>
                 </form>
-            </section>
+            </div>
 
-            <section class="glass-panel p-8 rounded-2xl shadow-xl flex flex-col gap-6">
+            <form action="/run-login" method="POST" class="space-y-6">
                 <div>
-                    <h2 class="text-xl font-bold text-slate-100 flex items-center gap-2">⚙️ Orchestration Core</h2>
-                    <p class="text-xs text-slate-400 mt-1">Execute systemic lifecycle stages sequentially to align Playwright hooks.</p>
+                    <h2 class="text-base font-bold text-slate-200">Step 2: Provide Runtime Target Profiles</h2>
+                    <p class="text-xs text-slate-400 mt-0.5">Credentials exist entirely in memory for this session lifecycle and are never logged.</p>
                 </div>
-                <div class="space-y-4">
-                    <div class="p-4 bg-slate-900/40 border border-slate-800/60 rounded-xl flex items-center justify-between gap-4">
-                        <div class="flex-grow">
-                            <h3 class="text-sm font-semibold text-slate-200">Step 1: Debug Window</h3>
-                            <p class="text-xs text-slate-400 mt-0.5">Recycles existing background instances and spins up port 9222.</p>
-                        </div>
-                        <form action="/launch-browser" method="POST" class="shrink-0">
-                            <button type="submit" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold px-4 py-2.5 rounded-lg border border-slate-700 transition-colors">
-                                🌐 Launch
-                            </button>
-                        </form>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">KRA PIN Identifier</label>
+                        <input type="text" name="pin" required placeholder="A00XXXXXXXX" 
+                               class="w-full bg-slate-950/60 border border-slate-800 focus:border-red-500/50 focus:ring-2 focus:ring-red-500/20 text-slate-100 placeholder-slate-600 rounded-xl px-4 py-3 text-sm font-medium tracking-wide outline-none transition-all">
                     </div>
-                    <div class="p-4 bg-slate-900/40 border border-slate-800/60 rounded-xl flex items-center justify-between gap-4">
-                        <div class="flex-grow">
-                            <h3 class="text-sm font-semibold text-slate-200">Step 2: Authenticate</h3>
-                            <p class="text-xs text-slate-400 mt-0.5">Triggers auto-population loops and waits for manual math solutions.</p>
-                        </div>
-                        <form action="/run-login" method="POST" class="shrink-0">
-                            <button type="submit" class="bg-red-600 hover:bg-red-500 text-white text-xs font-bold px-4 py-2.5 rounded-lg transition-colors shadow-lg shadow-red-950/50">
-                                🚀 Run Engine
-                            </button>
-                        </form>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Gateway Password</label>
+                        <input type="password" name="password" required placeholder="••••••••" 
+                               class="w-full bg-slate-950/60 border border-slate-800 focus:border-red-500/50 focus:ring-2 focus:ring-red-500/20 text-slate-100 placeholder-slate-600 rounded-xl px-4 py-3 text-sm outline-none transition-all">
                     </div>
                 </div>
-                <div class="text-center p-3 bg-slate-950/40 rounded-xl border border-slate-900">
-                    <p class="text-[11px] text-slate-500 font-mono tracking-wider">STATUS: READY FOR HANDOFF SEQUENCE</p>
-                </div>
-            </section>
+
+                <button type="submit" class="w-full bg-red-600 hover:bg-red-500 active:bg-red-600 text-white font-bold text-sm py-3.5 px-4 rounded-xl shadow-lg shadow-red-950/50 transition-all transform active:scale-[0.99]">
+                    🚀 Ignite Automated Authentication Path
+                </button>
+            </form>
+
+            <div class="text-center p-3 bg-slate-950/40 rounded-xl border border-slate-900">
+                <p class="text-[11px] text-slate-500 font-mono tracking-wider">SYSTEM REGISTRY STATE: DISCONNECTED / EPHEMERAL</p>
+            </div>
         </div>
     </main>
 
