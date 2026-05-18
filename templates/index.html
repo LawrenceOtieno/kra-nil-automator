@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRA Nil Automator Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.45);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 text-slate-100 min-h-screen flex flex-col justify-between">
+
+    <header class="container mx-auto px-6 pt-12 text-center max-w-4xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-red-500 via-orange-400 to-amber-400 bg-clip-text text-transparent mb-4">
+            ⚡ KRA Nil Automator Pro
+        </h1>
+        <p class="text-slate-400 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
+            A refined, distraction-free web gateway built to orchestrate local browser interactions with flawless precision.
+        </p>
+        <div class="flex flex-wrap justify-center gap-3 mt-6">
+            <span class="px-3 py-1 text-xs font-medium bg-slate-800/60 text-slate-300 border border-slate-700/50 rounded-full shadow-sm">🔒 Isolated Local Run</span>
+            <span class="px-3 py-1 text-xs font-medium bg-slate-800/60 text-slate-300 border border-slate-700/50 rounded-full shadow-sm">🌐 Edge CDP Hub</span>
+            <span class="px-3 py-1 text-xs font-medium bg-slate-800/60 text-slate-300 border border-slate-700/50 rounded-full shadow-sm">💻 Terminal Synced</span>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 max-w-5xl flex-grow">
+        {% if message %}
+        <div class="mb-8 p-4 rounded-xl {% if 'success' in status %}bg-emerald-950/40 border border-emerald-500/30 text-emerald-300{% else %}bg-amber-950/40 border border-amber-500/30 text-amber-300{% endif %} flex items-center gap-3">
+            <span>ℹ️</span> <p class="text-sm font-medium">{{ message }}</p>
+        </div>
+        {% endif %}
+
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+            <section class="glass-panel p-8 rounded-2xl shadow-xl space-y-6">
+                <div>
+                    <h2 class="text-xl font-bold text-slate-100 flex items-center gap-2">🔑 Identity Credentials</h2>
+                    <p class="text-xs text-slate-400 mt-1">Stored securely inside your local execution environment variables loop.</p>
+                </div>
+                <form action="/save" method="POST" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">KRA PIN Identifier</label>
+                        <input type="text" name="pin" value="{{ pin }}" placeholder="A00XXXXXXXX" 
+                               class="w-full bg-slate-950/60 border border-slate-800 focus:border-red-500/50 focus:ring-2 focus:ring-red-500/20 text-slate-100 placeholder-slate-600 rounded-xl px-4 py-3 text-sm font-medium tracking-wide outline-none transition-all duration-200">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Gateway Account Password</label>
+                        <input type="password" name="password" value="{{ password }}" placeholder="••••••••" 
+                               class="w-full bg-slate-950/60 border border-slate-800 focus:border-red-500/50 focus:ring-2 focus:ring-red-500/20 text-slate-100 placeholder-slate-600 rounded-xl px-4 py-3 text-sm outline-none transition-all duration-200">
+                    </div>
+                    <button type="submit" class="w-full bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold text-sm py-3 px-4 rounded-xl shadow-md transition-all duration-150 transform active:scale-[0.99] mt-2">
+                        💾 Save Engine Profiles
+                    </button>
+                </form>
+            </section>
+
+            <section class="glass-panel p-8 rounded-2xl shadow-xl flex flex-col gap-6">
+                <div>
+                    <h2 class="text-xl font-bold text-slate-100 flex items-center gap-2">⚙️ Orchestration Core</h2>
+                    <p class="text-xs text-slate-400 mt-1">Execute systemic lifecycle stages sequentially to align Playwright hooks.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="p-4 bg-slate-900/40 border border-slate-800/60 rounded-xl flex items-center justify-between gap-4">
+                        <div class="flex-grow">
+                            <h3 class="text-sm font-semibold text-slate-200">Step 1: Debug Window</h3>
+                            <p class="text-xs text-slate-400 mt-0.5">Recycles existing background instances and spins up port 9222.</p>
+                        </div>
+                        <form action="/launch-browser" method="POST" class="shrink-0">
+                            <button type="submit" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold px-4 py-2.5 rounded-lg border border-slate-700 transition-colors">
+                                🌐 Launch
+                            </button>
+                        </form>
+                    </div>
+                    <div class="p-4 bg-slate-900/40 border border-slate-800/60 rounded-xl flex items-center justify-between gap-4">
+                        <div class="flex-grow">
+                            <h3 class="text-sm font-semibold text-slate-200">Step 2: Authenticate</h3>
+                            <p class="text-xs text-slate-400 mt-0.5">Triggers auto-population loops and waits for manual math solutions.</p>
+                        </div>
+                        <form action="/run-login" method="POST" class="shrink-0">
+                            <button type="submit" class="bg-red-600 hover:bg-red-500 text-white text-xs font-bold px-4 py-2.5 rounded-lg transition-colors shadow-lg shadow-red-950/50">
+                                🚀 Run Engine
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="text-center p-3 bg-slate-950/40 rounded-xl border border-slate-900">
+                    <p class="text-[11px] text-slate-500 font-mono tracking-wider">STATUS: READY FOR HANDOFF SEQUENCE</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-900/60 py-6 text-center">
+        <p class="text-xs text-slate-500 font-mono">Project Folder Blueprint Root: <span class="text-slate-400">D:\Projects\kra-nil-automator</span></p>
+    </footer>
+</body>
+</html>
