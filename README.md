@@ -1,26 +1,26 @@
-# ? KRA Nil Automator Pro
+#  KRA Nil Automator Pro
 
 <p align="center">
-  <img src="https://img.shields.io/badge/python-3.12+-blue.svg?style=for-the-badge" alt="Python Version">
-  <img src="https://img.shields.io/badge/framework-Flask-emerald.svg?style=for-the-badge" alt="Framework">
-  <img src="https://img.shields.io/badge/engine-Playwright-red.svg?style=for-the-badge" alt="Automation Engine">
-  <img src="https://img.shields.io/badge/deployment-Industrial--WSGI-orange.svg?style=for-the-badge" alt="Deployment Status">
+  <img src="https://img.shields.io/badge/python-3.12+-blue.svgstyle=for-the-badge" alt="Python Version">
+  <img src="https://img.shields.io/badge/framework-Flask-emerald.svgstyle=for-the-badge" alt="Framework">
+  <img src="https://img.shields.io/badge/engine-Playwright-red.svgstyle=for-the-badge" alt="Automation Engine">
+  <img src="https://img.shields.io/badge/deployment-Industrial--WSGI-orange.svgstyle=for-the-badge" alt="Deployment Status">
 </p>
 
 An industrial-grade, multi-user automation engine designed to orchestrate ephemeral browser sessions for filing continuous Nil tax returns. Built with a sleek Tailwind CSS web interface and backed by a robust production WSGI server, this platform operates with **zero credential storage**—ensuring absolute privacy and data sovereignty.
 
 ---
 
-## ?? System Interface Overview
+##  System Interface Overview
 
-### ??? The Multi-User Control Center
+###  The Multi-User Control Center
 *An elegant, centralized dark-mode workspace where users inject execution targets into memory dynamically. This is the primary dashboard interface.*
 
 <p align="center">
   <img src="docs/images/web_dashboard.png" alt="KRA Nil Automator Pro Web Dashboard" width="800">
 </p>
 
-### ?? Automated Execution Pipeline
+###  Automated Execution Pipeline
 *A look inside the background engine thread. This view monitors the physical browser engine attaching to local debug ports, populating official fields, and awaiting captcha validation.*
 
 <p align="center">
@@ -29,16 +29,16 @@ An industrial-grade, multi-user automation engine designed to orchestrate epheme
 
 ---
 
-## ?? Key Architectural Features
+##  Key Architectural Features
 
-* **?? Multi-User Ephemeral Architecture:** Credentials exist purely within volatile runtime memory pools during the active execution thread. No database pipelines, no local \.env\ writing, and absolute security isolation.
-* **?? Hardware-Level Automation:** Leverages native Playwright CDP (Chrome DevTools Protocol) to attach seamlessly to pre-warmed Edge/Chromium contexts, bypassing aggressive anti-bot layout overlays.
-* **? Industrial WSGI Core:** Driven by a multi-threaded \Waitress\ production web server capable of handling concurrent multi-user requests without blocking execution threads.
-* **?? Assisted Captcha Handoff:** Automates 95% of the navigation, identity data-entry, and password injection, pausing gracefully for exactly 12 seconds to let the human operator input the custom arithmetic verification token.
+* ** Multi-User Ephemeral Architecture:** Credentials exist purely within volatile runtime memory pools during the active execution thread. No database pipelines, no local \.env\ writing, and absolute security isolation.
+* ** Hardware-Level Automation:** Leverages native Playwright CDP (Chrome DevTools Protocol) to attach seamlessly to pre-warmed Edge/Chromium contexts, bypassing aggressive anti-bot layout overlays.
+* ** Industrial WSGI Core:** Driven by a multi-threaded \Waitress\ production web server capable of handling concurrent multi-user requests without blocking execution threads.
+* ** Assisted Captcha Handoff:** Automates 95% of the navigation, identity data-entry, and password injection, pausing gracefully for exactly 12 seconds to let the human operator input the custom arithmetic verification token.
 
 ---
 
-## ??? System Architecture Flow
+##  System Architecture Flow
 
 \\\mermaid
 graph TD
@@ -54,7 +54,7 @@ graph TD
 
 ---
 
-## ?? Local Workspace Installation
+##  Local Workspace Installation
 
 ### 1. Clone & Initialize Environment
 \\\powershell
@@ -74,7 +74,7 @@ playwright install chromium
 
 ---
 
-## ?? Running the Infrastructure
+##  Running the Infrastructure
 
 ### Production Execution Mode (Industry Ready Grad-Web)
 To launch the system inside a multi-threaded web server ready for internal team trials or local area network testing, execute the production wrapper:
@@ -91,5 +91,5 @@ python app.py
 
 ---
 
-## ?? Security Statement
+##  Security Statement
 This application is strictly **ephemeral**. It does not possess a persistent database component, state registry machine, or remote tracker analytics. When a user executes the engine, their credentials are transferred securely via local HTTP POST methods directly to the operating system's command execution flags, passing instantly to the browser session and evaporating entirely upon task completion.
