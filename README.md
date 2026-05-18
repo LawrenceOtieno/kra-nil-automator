@@ -54,6 +54,7 @@ graph LR
 
 ---
 ## 💻 Local Workspace Installation
+
 ### 1. Clone & Initialize Environment
 ```powershell
 # Clone the repository
@@ -63,8 +64,6 @@ cd kra-nil-automator
 # Install production and automation core libraries
 pip install flask playwright waitress python-dotenv
 ```
-
----
 
 ### 2. Verify Playwright Browser Binaries
 Ensure your local system has the required Chromium/Edge components installed:
