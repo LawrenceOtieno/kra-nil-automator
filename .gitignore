@@ -1,2 +1,8 @@
 .vscode/
 venv/
+# Ignore automated browser profiles and runtime metrics
+edge_profile/
+
+# Ignore Python bytecode cache structures
+__pycache__/
+*.pyc
