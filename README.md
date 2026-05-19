@@ -6,28 +6,18 @@ An industrial-grade, multi-user automation engine designed to orchestrate epheme
 
 ## 📸 System Interface Overview
 
-<table width="100%">
-  <tr>
-    <td width="50%" align="center">
-      <b>🖥️ The Multi-User Control Center</b>
-      <br><br>
-      <img src="./docs/assets/web.png" alt="Multi-User Control Center" width="100%" style="border-radius: 8px;"/>
-      <br>
-      <sub>An elegant, centralized dark-mode workspace where users inject execution targets into memory dynamically.</sub>
-    </td>
-    <td width="50%" align="center">
-      <b>⚙️ Automated Execution Pipeline</b>
-      <br><br>
-      <img src="./docs/assets/terminal.png" alt="Automated Execution Pipeline" width="100%" style="border-radius: 8px;"/>
-      <br>
-      <sub>Monitors the physical browser engine attaching to local debug ports, populating official fields, and awaiting captcha validation.</sub>
-    </td>
-  </tr>
-</table>
+## 📸 System Interface Overview
 
 
+|## 📸 System Interface Overview
 
-*(Note: Replace the placeholder image URLs above with your actual screenshot paths once uploaded to GitHub, e.g., `docs/assets/dashboard.png`)*
+
+| 🖥️ The Multi-User Control Center | ⚙️ Automated Execution Pipeline |
+| :---: | :---: |
+| ![Multi-User Control Center](https://githubusercontent.com) | ![Automated Execution Pipeline](https://githubusercontent.com) |
+| *An elegant, centralized dark-mode workspace where users inject execution targets into memory dynamically.* | *Monitors the physical browser engine attaching to local debug ports, populating official fields, and awaiting captcha validation.* |
+ |
+| *An elegant, centralized dark-mode workspace where users inject execution targets into memory dynamically.* | *Monitors the physical browser engine attaching to local debug ports, populating official fields, and awaiting captcha validation.* |
 
 ---
 
