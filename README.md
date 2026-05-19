@@ -6,17 +6,10 @@ An industrial-grade, multi-user automation engine designed to orchestrate epheme
 
 ## 📸 System Interface Overview
 
-## 📸 System Interface Overview
-
-
-|## 📸 System Interface Overview
-
 
 | 🖥️ The Multi-User Control Center | ⚙️ Automated Execution Pipeline |
 | :---: | :---: |
-| ![Multi-User Control Center](https://githubusercontent.com) | ![Automated Execution Pipeline](https://githubusercontent.com) |
-| *An elegant, centralized dark-mode workspace where users inject execution targets into memory dynamically.* | *Monitors the physical browser engine attaching to local debug ports, populating official fields, and awaiting captcha validation.* |
- |
+| ![Multi-User Control Center](docs/assets/web.png) | ![Automated Execution Pipeline](docs/assets/terminal.png) |
 | *An elegant, centralized dark-mode workspace where users inject execution targets into memory dynamically.* | *Monitors the physical browser engine attaching to local debug ports, populating official fields, and awaiting captcha validation.* |
 
 ---
@@ -58,7 +51,7 @@ graph TD
 
 ```powershell
 # Clone the repository
-git clone https://github.com/your-username/kra-nil-automator.git
+git clone https://github.com
 cd kra-nil-automator
 
 # Install production and automation core libraries
